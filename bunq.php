@@ -54,7 +54,7 @@ function bunq_CreateContextSandbox($key, $device, $ips = []) {
 * Optionally you can pass user id and account id.
 * Returns the array as seen below, including the raw object from the API.
 */
-function bunq_CreateRequest($amount, $description, $user = 0, $account = 0, $redirect) {
+function bunq_CreateRequest($amount, $description, $redirect, $user = 0, $account = 0) {
 
 	$apiContext = ApiContext::restore(ApiContext::FILENAME_CONFIG_DEFAULT);
 	$users = User::listing($apiContext)->getValue();
@@ -67,8 +67,8 @@ function bunq_CreateRequest($amount, $description, $user = 0, $account = 0, $red
 	$requestMap = [
 		BunqMeTab::FIELD_BUNQME_TAB_ENTRY => [
 			BunqMeTabEntry::FIELD_AMOUNT_INQUIRED => new Amount($amount, 'EUR'),
-			BunqMeTabEntry::FIELD_REDIRECT_URL => "http://google.nl",
-			BunqMeTabEntry::FIELD_DESCRIPTION => $redirect
+			BunqMeTabEntry::FIELD_REDIRECT_URL => $redirect,
+			BunqMeTabEntry::FIELD_DESCRIPTION => $description
 		]
 	];
 	$createBunqMeTab = BunqMeTab::create($apiContext, $requestMap, $userId, $monetaryAccountId)->getValue();

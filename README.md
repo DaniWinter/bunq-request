@@ -27,7 +27,7 @@ Create a bunq context for the API (only run once):
 
 Create a payment request:
 
-`bunq_CreateRequest("PAYMENT-AMOUNT", "PAYMENT-DESCRIPTION", 0, 0, "REDIRECT-TO-URL-AFTER-PAYMENT")`
+`bunq_CreateRequest("PAYMENT-AMOUNT", "PAYMENT-DESCRIPTION", "REDIRECT-TO-URL-AFTER-PAYMENT")`
 
 Check the status of the payment request:
 
