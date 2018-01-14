@@ -21,7 +21,7 @@ In the future I want to implement more basic functionality, but I currently don'
 - Maybe convert this small project into a full gateway with nice UI and interaction.
 
 ### Examples
-Create a bunq context for the API:
+Create a bunq context for the API (only run once):
 
 `bunq_CreateContext("API-KEY-HERE", "DEVICE-NAME-HERE", "IP-ADDRESS-HERE")`
 
