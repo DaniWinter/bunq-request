@@ -11,6 +11,7 @@ So I wrapped this shit up into easy to use functions for your project.
 - Create a sandbox/production context.
 - Create a payment request which can be paid using iDeal or SOFORT, then redirect to your URL after payment.
 - Get the status of an existing payment request.
+- Includes htaccess to protect your bunq.conf.
 
 ### Future
 In the future I want to implement more basic functionality, but I currently don't have bunq Premium. The bunq sandbox isn't fully functional unfortunately, so I can't really test things out for now.
@@ -21,12 +22,15 @@ In the future I want to implement more basic functionality, but I currently don'
 
 ### Examples
 Create a bunq context for the API:
+
 `bunq_CreateContext("API-KEY-HERE", "DEVICE-NAME-HERE", "IP-ADDRESS-HERE")`
 
 Create a payment request:
+
 `bunq_CreateRequest("PAYMENT-AMOUNT", "PAYMENT-DESCRIPTION", 0, 0, "REDIRECT-TO-URL-AFTER-PAYMENT")`
 
 Check the status of the payment request:
+
 `bunq_StatusRequest("PAYMENT-ID")`
 
 ### Contribution
