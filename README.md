@@ -39,3 +39,6 @@ Feel free to contribute, we can make the bunq API useful this way.
 ### Credits
 - https://github.com/basst85/bunq_pay for the Javascript code which is used to port to PHP for future use.
 - https://github.com/bunq/sdk_php/tree/develop/example for code snippets, to find out how this API works.
+
+### License
+MIT License
